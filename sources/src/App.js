@@ -1,8 +1,11 @@
-import './App.css';
+import "./App.css";
+import { Recipes } from "./helpers/fetch";
 
 function App() {
+  
   return (
     <div className="App">
+      <Recipes/>
       <header className="App-header">
         <p>
           Edit <code>src/App.js</code> and save to reload.
