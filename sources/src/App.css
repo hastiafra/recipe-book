@@ -46,8 +46,9 @@
 .title {
   text-transform: capitalize;
   z-index: 50;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: bold;
+  margin-bottom: 100px;
 }
 
 .search {
@@ -64,7 +65,7 @@
   position: relative;
   text-align: center;
   text-transform: capitalize;
-  width: 50vw;
+  width: 100px;
   z-index: 50;
 }
 
@@ -73,7 +74,9 @@
   font-size: 1rem;
   text-transform: lowercase;
 }
-
+.search {
+  width: 50vw;
+}
 .searchButton {
   border: white;
   border-radius: 50px;
@@ -86,7 +89,9 @@
   padding: 25px;
   position: absolute;
   text-transform: capitalize;
-  top: 2px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   z-index: 60;
 }
 
@@ -98,4 +103,24 @@
 
 .searchWrapper {
   position: relative;
+}
+
+@media (max-width: 950px) {
+  .search{
+    margin-bottom: 50px;
+  }
+  .searchButton {
+    position: relative;
+    margin:unset;
+  }
+
+  .searchWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    margin-bottom: 5vh;
+    padding: 20px;
+  }
 }
