@@ -1,24 +1,22 @@
 import "./App.css";
+
 import { Recipes } from "./helpers/fetch";
 
 function App() {
-  
   return (
     <div className="App">
-      <Recipes/>
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="appWrapper">
+        <p className="title">Please search for your recipes</p>
+        <div className="searchWrapper">
+          <input
+            className="search"
+            type="search"
+            placeholder="e.g., pasta, cake and soup"
+          ></input>
+          <button className="searchButton">go!</button>
+        </div>
+      </div>
+      <div className="overlay"></div>
     </div>
   );
 }
