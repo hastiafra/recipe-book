@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import "./home.css";
 
 const Home = ({ setRecipesData, recipeData }) => {
@@ -19,9 +20,11 @@ const Home = ({ setRecipesData, recipeData }) => {
         console.log(er);
       }
     }
+
     if (!recipeData.length || recipeData === undefined) {
       setError(true);
     }
+    
   };
   return (
     <>
