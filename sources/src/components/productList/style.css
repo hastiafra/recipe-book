@@ -1,9 +1,40 @@
 .listImage {
-    border-radius: 20px;
+  border-radius: 20px;
 }
 
-.listName {
-  color: Black;
+.paginationActive a{
+  font-weight: bold;
+  background-color: pink;
+}
+
+.paginationBtn {
+  max-width: 80vw;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  height: 40px;
+}
+
+.paginationBtn a {
+  cursor: pointer;
+  font-style: italic;
+  font-weight: 400;
+  margin: 1.5vw;
+  padding: 5px 15px;
+  border-radius: 50px;
+}
+
+.paginationBtn a:hover{
+    background-color:green;
+    color:white;
+  }
+
+.paginationContainer {
+  background-color: gainsboro;
+  margin: 0px 20px;
+  padding: 20px;
+  z-index: 20;
 }
 
 .productLinkContainer {
@@ -15,6 +46,7 @@
 }
 
 .productLinkContainer:hover {
+  color: green;
   filter: grayscale(0);
 }
 
@@ -28,6 +60,7 @@
   justify-content: center;
   margin: 0px 20px;
   text-align: center;
+  border-bottom: green dotted 1px;
 }
 
 .welcomeTitle {
