@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
 
@@ -7,8 +8,16 @@ function App() {
 
   return (
     <div>
-      <Home setRecipesData={setRecipesData} recipeData={recipeData}/>
-      <div className="overlay"></div>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home setRecipesData={setRecipesData} recipeData={recipeData} />
+            }
+          />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
