@@ -54,7 +54,7 @@
 ::placeholder {
   color: white;
   font-size: 1rem;
-  text-transform: lowercase;
+  text-transform: capitalize;
 }
 .search {
   width: 50vw;

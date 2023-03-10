@@ -147,7 +147,7 @@ const ProductList = ({ recipeData }) => {
     },
   ];
 
-  const [result, setResult] = useState(data.slice(0, 40));
+  const [result, setResult] = useState(recipeData.slice(0, 40));
 
   const [pageNumber, setPageNumber] = useState(0);
 

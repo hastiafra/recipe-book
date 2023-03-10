@@ -20,8 +20,8 @@ const Home = ({ setRecipesData, recipeData }) => {
         const data = await response.json();
         setRecipesData(data.results);
         resultNavigate();
-      } catch (er) {
-        console.log(er);
+      } catch (err) {
+        console.log(err);
       }
     } else {
       setError(true);
@@ -38,13 +38,13 @@ const Home = ({ setRecipesData, recipeData }) => {
   return (
     <>
       <div className="homeWrapper">
-        <p className="homeTitle">Please search for your recipes</p>
+        <p className="homeTitle">Please search for the origin country of the cuisine</p>
         <div className="searchWrapper">
           <input
             className="search"
             type="search"
             onChange={(e) => setSearchFieldValue(e.target.value)}
-            placeholder="e.g., pasta, cake and soup"
+            placeholder="e.g., African, Korean and French"
           ></input>
           <button className="searchButton" onClick={handleSearch}>
             go!
