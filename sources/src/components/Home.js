@@ -38,6 +38,7 @@ const Home = ({ setRecipesData, recipeData }) => {
             go!
           </button>
         </div>
+        {error && <p className="error">Please enter a valid keyword</p>}
       </div>
       <div className="overlay"></div>
     </>
