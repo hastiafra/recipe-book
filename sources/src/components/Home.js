@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import "./home.css";
 
 const Home = ({ setRecipesData, recipeData }) => {
   const { REACT_APP_SPOONACULAR, REACT_APP_SPOONACULAR_URL } = process.env;
+
+  const navigate = useNavigate();
 
   const [searchFieldValue, setSearchFieldValue] = useState(null);
 
@@ -16,15 +19,21 @@ const Home = ({ setRecipesData, recipeData }) => {
         const response = await fetch(searchUrl);
         const data = await response.json();
         setRecipesData(data.results);
+        resultNavigate();
       } catch (er) {
         console.log(er);
       }
-    }
-
-    if (!recipeData.length || recipeData === undefined) {
+    } else {
       setError(true);
     }
-    
+  };
+
+  const resultNavigate = () => {
+    if (!recipeData || recipeData === undefined) {
+      setError(true);
+    } else {
+      navigate("/recipesList");
+    }
   };
   return (
     <>

@@ -92,6 +92,7 @@
   font-size: 1rem;
   z-index: 60;
   font-weight: bold;
+  margin-top: 20px;
 }
 
 @media (max-width: 950px) {
