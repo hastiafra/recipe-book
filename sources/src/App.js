@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
+import Product from "./components/product/Product";
 import ProductList from "./components/productList/ProductList";
 
 function App() {
@@ -21,6 +22,12 @@ function App() {
             path="/recipesList"
             element={
               <ProductList recipeData={recipeData} />
+            }
+          />
+            <Route
+            path="/recipesList/:recipeId"
+            element={
+              <Product/>
             }
           />
         </Routes>

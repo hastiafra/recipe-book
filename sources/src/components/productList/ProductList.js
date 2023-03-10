@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import ReactPaginate from "react-paginate";
 
 import "./style.css";
@@ -162,8 +162,6 @@ const ProductList = ({ recipeData }) => {
     setPageNumber(selected);
   };
 
-  console.log(pageCount);
-
   return (
     <>
       <p className="welcomeTitle">Here you go!</p>
@@ -184,7 +182,11 @@ const ProductList = ({ recipeData }) => {
 
         {displayData.map((recipe) => {
           return (
-            <Link className="productLinkContainer" key={recipe.id}>
+            <Link
+              to={`/recipesList/${recipe.id}`}
+              className="productLinkContainer"
+              key={recipe.id}
+            >
               <h3 className="listName">{recipe.title}</h3>
               <img
                 className="listImage"
