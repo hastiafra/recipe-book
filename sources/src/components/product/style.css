@@ -1,0 +1,10 @@
+.productContainer{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerContainer{
+    display: flex;
+    margin: 20px;
+}

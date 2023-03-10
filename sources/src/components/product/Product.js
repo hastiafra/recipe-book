@@ -357,13 +357,21 @@ const Product = () => {
       <div>
         {dummyData.map((item, index) => {
           return (
-            <div key={index}>
+            <div className="productContainer" key={index}>
               <h1>{item.title}</h1>
-              <img src={item.image} alt={item.title} />
-              <h4>Health Information:</h4>
-              {item.diets.map((diet, i) => {
-                return <li key={i}>{diet}</li>;
-              })}
+              <div className="headerContainer">
+                <img src={item.image} alt={item.title} />
+                <div>
+                  <h4>Health Information:</h4>
+                  {item.diets.map((diet, i) => {
+                    return (
+                      <ul>
+                        <li key={i}>{diet}</li>
+                      </ul>
+                    );
+                  })}
+                </div>
+              </div>
               <h4>Ingredients</h4>
               {item.extendedIngredients.map((ingr, i) => {
                 return (
