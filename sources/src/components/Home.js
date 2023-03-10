@@ -14,7 +14,7 @@ const Home = ({ setRecipesData, recipeData }) => {
 
   const handleSearch = async () => {
     if (searchFieldValue) {
-      const searchUrl = `${REACT_APP_SPOONACULAR_URL}recipes/complexSearch?apiKey=${REACT_APP_SPOONACULAR}&query=${searchFieldValue.toLowerCase()}`;
+      const searchUrl = `${REACT_APP_SPOONACULAR_URL}recipes/complexSearch?apiKey=${REACT_APP_SPOONACULAR}&query=${searchFieldValue.toLowerCase()}&number=100`;
       try {
         const response = await fetch(searchUrl);
         const data = await response.json();

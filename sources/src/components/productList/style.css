@@ -1,0 +1,39 @@
+.listImage {
+    border-radius: 20px;
+}
+
+.listName {
+  color: Black;
+}
+
+.productLinkContainer {
+  cursor: pointer;
+  filter: grayscale(1);
+  margin: 20px 25px;
+  text-decoration: none;
+  transition: 200ms ease-in;
+}
+
+.productLinkContainer:hover {
+  filter: grayscale(0);
+}
+
+.productListWrapper {
+  align-content: center;
+  align-items: center;
+  background-color: gainsboro;
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px 20px;
+  text-align: center;
+}
+
+.welcomeTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 50px 0px;
+  text-align: center;
+  text-transform: capitalize;
+}
