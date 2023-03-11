@@ -1,10 +1,51 @@
-.productContainer{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+.instructionWrapper {
+  background-color: #fffde7;
+  padding: 20px;
 }
 
-.headerContainer{
-    display: flex;
-    margin: 20px;
+.ingredient {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+  background-color: #fffde7;
+}
+
+.ingrMeasure {
+  color: rgb(51, 80, 0);
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+.ingrTitle {
+  font-weight: bold;
+  padding-right: 20px;
+  text-decoration-color: rgb(245, 153, 196);
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-transform: capitalize;
+  text-underline-offset: 10px;
+}
+
+.ingredientWrapper {
+  display: flex;
+  align-items: center;
+  margin: 0px 50px;
+}
+
+.wrapper {
+  margin: 0px 5vw;
+  font-size: 1.2rem;
+}
+
+.productContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerContainer {
+  display: flex;
+  margin: 20px;
 }

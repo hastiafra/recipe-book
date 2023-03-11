@@ -373,18 +373,25 @@ const Product = () => {
                 </div>
               </div>
               <h4>Ingredients</h4>
-              {item.extendedIngredients.map((ingr, i) => {
-                return (
-                  <div key={i}>
-                    <p>{ingr.name}</p>
-                    <p>{ingr.measures.metric.amount}</p>
-                    <p>{ingr.measures.metric.unitLong}</p>
-                  </div>
-                );
-              })}
-
-              <h4>Cooking Instructions</h4>
-              <p>{item.instructions}</p>
+              <div className="ingredient">
+                {item.extendedIngredients.map((ingr, i) => {
+                  return (
+                    <div className="ingredientWrapper" key={i}>
+                      <ul>
+                        <li className="ingrTitle">{ingr.name}</li>
+                      </ul>
+                      <p className="ingrMeasure">
+                        {ingr.measures.metric.amount}
+                      </p>
+                      <p>{ingr.measures.metric.unitLong}</p>
+                    </div>
+                  );
+                })}
+              </div>
+                <h4>Cooking Instructions</h4>
+              <div className="instructionWrapper">
+                <p className="wrapper">{item.instructions}</p>
+              </div>
             </div>
           );
         })}
