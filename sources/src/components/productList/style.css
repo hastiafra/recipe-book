@@ -2,7 +2,7 @@
   border-radius: 20px;
 }
 
-.paginationActive a{
+.paginationActive a {
   font-weight: bold;
   background-color: pink;
 }
@@ -14,6 +14,7 @@
   justify-content: center;
   margin: auto;
   height: 40px;
+  padding-left: 0px;
 }
 
 .paginationBtn a {
@@ -21,14 +22,14 @@
   font-style: italic;
   font-weight: 400;
   margin: 1.5vw;
-  padding: 5px 15px;
+  padding: 2vh 1.5vw;
   border-radius: 50px;
 }
 
-.paginationBtn a:hover{
-    background-color:green;
-    color:white;
-  }
+.paginationBtn a:hover {
+  background-color: green;
+  color: white;
+}
 
 .paginationContainer {
   background-color: gainsboro;
@@ -69,4 +70,14 @@
   margin: 50px 0px;
   text-align: center;
   text-transform: capitalize;
+}
+
+@media (max-width: 950px) {
+  .productLinkContainer {
+    filter: none;
+  }
+
+  .productLinkContainer h3{
+    color:black;
+  }
 }
