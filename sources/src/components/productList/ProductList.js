@@ -1,12 +1,15 @@
 import { useState } from "react";
 
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ReactPaginate from "react-paginate";
 
 import "./style.css";
 
-const ProductList = ({ recipeData }) => {
-  const [result, setResult] = useState(recipeData.slice(0, 40));
+const ProductList = () => {
+  let sessionData = sessionStorage.getItem("searchedData");
+  let rawData = JSON.parse(sessionData);
+
+  const [result, setResult] = useState(rawData?.slice(0, 40));
 
   const [pageNumber, setPageNumber] = useState(0);
 

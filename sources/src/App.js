@@ -6,7 +6,7 @@ import Product from "./components/product/Product";
 import ProductList from "./components/productList/ProductList";
 
 function App() {
-  const [recipeData, setRecipesData] = useState([]);
+  
 
   return (
     <div>
@@ -15,12 +15,12 @@ function App() {
           <Route
             path="/"
             element={
-              <Home setRecipesData={setRecipesData} recipeData={recipeData} />
+              <Home/>
             }
           />
           <Route
             path="/recipesList"
-            element={<ProductList recipeData={recipeData} />}
+            element={<ProductList/>}
           />
           <Route path="/recipesList/:recipeId" element={<Product />} />
         </Routes>

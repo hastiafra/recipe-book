@@ -3,8 +3,11 @@ import { useNavigate } from "react-router-dom";
 
 import "./home.css";
 
-const Home = ({ setRecipesData, recipeData }) => {
+const Home = () => {
+
   const { REACT_APP_SPOONACULAR, REACT_APP_SPOONACULAR_URL } = process.env;
+  
+  const [recipeData, setRecipesData] = useState([]);
 
   const navigate = useNavigate();
 
@@ -14,11 +17,12 @@ const Home = ({ setRecipesData, recipeData }) => {
 
   const handleSearch = async () => {
     if (searchFieldValue) {
-      const searchUrl=`${REACT_APP_SPOONACULAR_URL}recipes/complexSearch?apiKey=${REACT_APP_SPOONACULAR}&query=${searchFieldValue.toLowerCase()}&number=100`;
+      const searchUrl = `${REACT_APP_SPOONACULAR_URL}recipes/complexSearch?apiKey=${REACT_APP_SPOONACULAR}&query=${searchFieldValue.toLowerCase()}&number=100`;
       try {
         const response = await fetch(searchUrl);
         const data = await response.json();
         setRecipesData(data.results);
+        sessionStorage.setItem("searchedData", JSON.stringify(data.results));
         resultNavigate();
       } catch (err) {
         console.log(err);
@@ -29,7 +33,7 @@ const Home = ({ setRecipesData, recipeData }) => {
   };
 
   const resultNavigate = () => {
-    if (!recipeData || recipeData === undefined) {
+    if (recipeData.length !== 0 || recipeData === undefined) {
       setError(true);
     } else {
       navigate("/recipesList");
@@ -38,7 +42,9 @@ const Home = ({ setRecipesData, recipeData }) => {
   return (
     <>
       <div className="homeWrapper">
-        <p className="homeTitle">Please search for the origin country of the cuisine</p>
+        <p className="homeTitle">
+          Please search for the origin country of the cuisine
+        </p>
         <div className="searchWrapper">
           <input
             className="search"
