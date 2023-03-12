@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import parse from "html-react-parser"
 
 import "./style.css";
 
@@ -61,7 +62,7 @@ const Product = () => {
               </div>
                 <h4>Cooking Instructions</h4>
               <div className="instructionWrapper">
-                <p className="wrapper">{item.instructions}</p>
+                <p className="wrapper">{parse(item.instructions)}</p>
               </div>
             </div>
           );

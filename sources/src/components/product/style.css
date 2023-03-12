@@ -10,6 +10,7 @@
 .instructionWrapper {
   background-color: #fffde7;
   padding: 50px 20px;
+  text-align: left;
 }
 
 .ingredient {
