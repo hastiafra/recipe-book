@@ -33,7 +33,7 @@ const Home = () => {
   };
 
   const resultNavigate = () => {
-    if (recipeData.length !== 0 || recipeData === undefined) {
+    if (recipeData.length === 0 || recipeData === undefined) {
       setError(true);
     } else {
       navigate("/recipesList");
