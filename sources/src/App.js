@@ -18,18 +18,11 @@ function App() {
               <Home setRecipesData={setRecipesData} recipeData={recipeData} />
             }
           />
-           <Route
+          <Route
             path="/recipesList"
-            element={
-              <ProductList recipeData={recipeData} />
-            }
+            element={<ProductList recipeData={recipeData} />}
           />
-            <Route
-            path="/recipesList/:recipeId"
-            element={
-              <Product/>
-            }
-          />
+          <Route path="/recipesList/:recipeId" element={<Product />} />
         </Routes>
       </BrowserRouter>
     </div>

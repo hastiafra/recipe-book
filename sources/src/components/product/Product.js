@@ -11,7 +11,7 @@ const Product = () => {
   const [recipe, setRecipe] = useState([]);
 
   const getRecipeDetail = async () => {
-    const recipeURL = `${REACT_APP_SPOONACULAR_URL}recipes/${recipeId}/information?apiKey=${REACT_APP_SPOONACULAR}`;
+    const recipeURL=`${REACT_APP_SPOONACULAR_URL}recipes/${recipeId}/information?apiKey=${REACT_APP_SPOONACULAR}`;
     try {
       const response = await fetch(recipeURL);
       const data = await response.json();
